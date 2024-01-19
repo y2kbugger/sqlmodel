@@ -21,7 +21,7 @@ In most cases this would probably not be a problem, for example measuring views 
 
 Pydantic has special support for <a href="https://docs.pydantic.dev/latest/api/standard_library_types/#decimaldecimal" class="external-link" target="_blank">`Decimal` types</a>.
 
-When you use `Decimal` you can specify the number of digits and decimal places to support in the `Field()` function. They will be validated by Pydantic (for example when using FastAPI) and the same information will also be used for the database columns.
+When you use `Decimal` you can specify the number of digits and decimal places to support in the `Field()` specifier. They will be validated by Pydantic (for example when using FastAPI) and the same information will also be used for the database columns.
 
 /// info
 
@@ -31,7 +31,7 @@ For the database, **SQLModel** will use <a href="https://docs.sqlalchemy.org/en/
 
 ## Decimals in SQLModel
 
-Let's say that each hero in the database will have an amount of money. We could make that field a `Decimal` type using the `condecimal()` function:
+Let's say that each hero in the database will have an amount of money. We could make that field a `Decimal` type using the `Field` specifier:
 
 ```{.python .annotate hl_lines="12" }
 {!./docs_src/advanced/decimal/tutorial001.py[ln:1-12]!}
